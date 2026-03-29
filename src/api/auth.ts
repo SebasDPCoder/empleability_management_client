@@ -27,6 +27,7 @@ type LoginResponse = {
 }
 
 type RegisterResponse = {
+  success: boolean
   data: BaseUser
   message: string
 }
@@ -38,5 +39,6 @@ export async function login(credentials: LoginCredentials): Promise<LoginRespons
 
 export async function register(data: RegisterData): Promise<RegisterResponse> {
   const response = await axiosClient.post<RegisterResponse>('/api/auth/register', data)
+  console.log(response.data)
   return response.data
 }

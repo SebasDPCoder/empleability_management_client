@@ -27,15 +27,26 @@ function RegisterPage() {
       return
     }
 
+    if (form.password.length < 8) {
+      setError('La contraseña debe tener al menos 8 caracteres.')
+      return
+    }
+
     setLoading(true)
     setError('')
 
     try {
       await register(form)
-      // Redirect to login after successful registration
       navigate('/login')
-    } catch {
-      setError('Error al registrar usuario. Intenta de nuevo.')
+    } catch (err: any) {
+      const backendMessage = err.response?.data?.message
+      if (Array.isArray(backendMessage)) {
+        setError(backendMessage.join(', '))
+      } else if (backendMessage) {
+        setError(backendMessage)
+      } else {
+        setError('Error al registrar usuario. Intenta de nuevo.')
+      }
     } finally {
       setLoading(false)
     }
