@@ -1,0 +1,9 @@
+node_modules
+dist
+.git
+.gitignore
+README.md
+Dockerfile
+docker-compose.yml
+# Include other files like .eslint.config.js if you want but it may not be necessary for the final build
+# However, Vite needs vite.config.ts and tsconfig*.json

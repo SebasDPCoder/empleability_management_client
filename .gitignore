@@ -23,12 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# Docker
-.docker
-.dockerignore
-Dockerfile
-docker-compose.override.yml
-
 # Environment variables
 .env
 .env.local
