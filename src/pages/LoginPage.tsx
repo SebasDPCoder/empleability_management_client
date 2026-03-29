@@ -1,6 +1,6 @@
 // src/pages/LoginPage.tsx
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { login } from '../api/auth'
 import Button from '../components/Button'
 
@@ -152,6 +152,15 @@ function LoginPage() {
             disabled={loading}
             variant="primary"
           />
+
+          <div className="text-center mt-4">
+            <p className="text-sm text-gray-500">
+              ¿No tienes cuenta?{' '}
+              <Link to="/register" className="text-blue-600 font-semibold hover:underline">
+                Regístrate aquí
+              </Link>
+            </p>
+          </div>
         </form>
 
       </div>
