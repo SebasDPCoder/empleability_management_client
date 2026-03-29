@@ -1,11 +1,9 @@
 services:
   web:
-    build: .
+    build:
+      context: .
+      args:
+        VITE_API_URL: ${VITE_API_URL}
+        VITE_API_KEY: ${VITE_API_KEY}
     ports:
       - "8081:80"
-    volumes:
-      - .:/app
-      - /app/node_modules
-    environment:
-      - VITE_API_KEY=${VITE_API_KEY}
-      - VITE_API_URL=${VITE_API_URL}
