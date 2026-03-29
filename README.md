@@ -11,6 +11,17 @@ Employability management system that facilitates:
 - **User Management**: Manage system users
 - **Dashboard**: Control panel with statistics and relevant information
 
+---
+
+## 🚀 Live Deployment
+
+The application is deployed and can be accessed at:
+
+- **Frontend Client (Render)**: [https://empleability-management-client.onrender.com](https://empleability-management-client.onrender.com)
+- **Backend API (Railway)**: [https://empleabilitymanagementapi-production.up.railway.app/api](https://empleabilitymanagementapi-production.up.railway.app/api)
+
+---
+
 ## Features
 
 - ✅ Modern and responsive interface with Tailwind CSS
@@ -33,7 +44,7 @@ Employability management system that facilitates:
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repo>
+git clone https://github.com/SebasDPCoder/empleability_management_client.git
 cd empleability_management_client
 ```
 
